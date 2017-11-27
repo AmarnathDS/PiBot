@@ -1,0 +1,40 @@
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\obj\Debug\PiBot.csprojResolveAssemblyReference.cache
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Bot Application.dll.config
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Bot Application.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Bot Application.pdb
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Autofac.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Chronic.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.Bot.Builder.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.Bot.Connector.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.Rest.ClientRuntime.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Newtonsoft.Json.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.Net.Http.Formatting.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.Web.Http.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.Web.Http.WebHost.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Autofac.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.Bot.Builder.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.Bot.Connector.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\Newtonsoft.Json.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.Net.Http.Formatting.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.Web.Http.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\System.Web.Http.WebHost.xml
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\obj\Debug\Bot Application.dll
+C:\POC\GLB-INDSTDGRPPOC\2017\POC 7\DRSTest\Universal Apps\PiBot\PiBot\obj\Debug\Bot Application.pdb
