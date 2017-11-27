@@ -43,8 +43,15 @@ namespace PiBot.Dialogs
                 // increment the counter
                 this.count++;
 
+                //Activity reply = activity.CreateReply($"{count}: You sent {activity.Text} which was {length} characters");
+                //reply.Speak = $"{count}: You said {activity.Text}";
+                //reply.InputHint = InputHints.ExpectingInput;
+                //await context.PostAsync(reply);
+
+
+
                 // say reply to the user
-                await context.SayAsync($"{count}: You sent {activity.Text} which was {length} characters", $"{count}: You said {activity.Text}", new MessageOptions() { InputHint = InputHints.AcceptingInput });
+                await context.SayAsync($"{count}: You sent {activity.Text} which was {length} characters", $"{count}: You said {activity.Text} which was {length} characters", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                 context.Wait(MessageReceivedAsync);
             }
 
