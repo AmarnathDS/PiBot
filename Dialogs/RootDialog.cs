@@ -23,7 +23,7 @@ namespace PiBot.Dialogs
             activity.Text = activity.Text ?? string.Empty;
 
             // check if the user said reset
-            if (activity.Text.ToLowerInvariant().Contains("order"))
+            if (activity.Text.ToLowerInvariant().Contains("order") || activity.Text.ToLowerInvariant().Contains("details"))
             {
                 // ask the user to confirm if they want to reset the counter
                 //var options = new PromptOptions<string>(prompt: "Are you sure you want to reset the count?",
@@ -34,47 +34,10 @@ namespace PiBot.Dialogs
 
                 //PromptDialog.Confirm(context, AfterResetAsync, options);
                 await context.SayAsync($"Please say the order number", $"Please say the order number", new MessageOptions() { InputHint = InputHints.ExpectingInput });
-                context.Wait(MessageReceivedAsync);
+                context.Wait(AfterResetAsync);
 
             }
-            else if (activity.Text.ToLowerInvariant().StartsWith("m1"))
-            {
-                // calculate something for us to return
-                //int length = activity.Text.Length;
-
-                // increment the counter
-                //this.count++;
-
-                //Activity reply = activity.CreateReply($"{count}: You sent {activity.Text} which was {length} characters");
-                //reply.Speak = $"{count}: You said {activity.Text}";
-                //reply.InputHint = InputHints.ExpectingInput;
-                //await context.PostAsync(reply);
-
-
-
-                // say reply to the user
-                await context.SayAsync($"order {activity.Text} is deliverd to plant", $"order {activity.Text} is deliverd to plant", new MessageOptions() { InputHint = InputHints.ExpectingInput });
-                context.Wait(MessageReceivedAsync);
-            }
-            else if (activity.Text.ToLowerInvariant().StartsWith("a2"))
-            {
-                // calculate something for us to return
-                //int length = activity.Text.Length;
-
-                // increment the counter
-                //this.count++;
-
-                //Activity reply = activity.CreateReply($"{count}: You sent {activity.Text} which was {length} characters");
-                //reply.Speak = $"{count}: You said {activity.Text}";
-                //reply.InputHint = InputHints.ExpectingInput;
-                //await context.PostAsync(reply);
-
-
-
-                // say reply to the user
-                await context.SayAsync($"order {activity.Text} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", $"order {activity.Text} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", new MessageOptions() { InputHint = InputHints.ExpectingInput });
-                context.Wait(MessageReceivedAsync);
-            }
+            
             else if (activity.Text.ToLowerInvariant().Contains("thank"))
             {
                 // calculate something for us to return
@@ -89,7 +52,7 @@ namespace PiBot.Dialogs
                 //await context.PostAsync(reply);
 
                 var rnd = new Random();
-                var say = rnd.Next(1, 4);
+                var say = rnd.Next(1, 3);
 
                 switch (say)
                 {
@@ -108,6 +71,12 @@ namespace PiBot.Dialogs
                         context.SayAsync($"Any time. Happy to help", $"Any time. Happy to help",
                        new MessageOptions() { InputHint = InputHints.ExpectingInput });
                         break;
+                    default:
+                        await
+                    context.SayAsync($"No Problem. Any time", $"No Problem. Any time",
+                   new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                        break;
+
                 }
 
                 // say reply to the user
@@ -117,12 +86,7 @@ namespace PiBot.Dialogs
             else if (activity.Text.ToLowerInvariant().Contains("part") || activity.Text.ToLowerInvariant().Contains("number"))
             {
                 await context.SayAsync($"Please say the part number", $"Please say the part number", new MessageOptions() { InputHint = InputHints.ExpectingInput });
-                context.Wait(MessageReceivedAsync);
-            }
-            else if (activity.Text.ToLowerInvariant().StartsWith("13"))
-            {
-                await context.SayAsync($"Part Qty for part {activity.Text} is 5. The rack location for the part {activity.Text} is WH010", $"Part Qty for part {activity.Text} is 5. The rack location for the part {activity.Text} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
-                context.Wait(MessageReceivedAsync);
+                context.Wait(AfterResetPartAsync);
             }
             else
             {
@@ -135,20 +99,56 @@ namespace PiBot.Dialogs
 
         }
 
-        public async Task AfterResetAsync(IDialogContext context, IAwaitable<bool> argument)
+        public async Task AfterResetAsync(IDialogContext context, IAwaitable<object> argument)
         {
             var confirm = await argument;
-            // check if user wants to reset the counter or not
-            if (confirm)
+
+            var rnd = new Random();
+            var say = rnd.Next(1, 2);
+
+            switch (say)
             {
-                this.count = 1;
-                await context.SayAsync("Reset count.", "I reset the counter for you!");
+                case 1:
+                    await
+                    context.SayAsync($"order {confirm} is deliverd to plant", $"order {confirm} is deliverd to plant", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    break;
+                case 2:
+                    await context.SayAsync($"order {confirm} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", $"order {confirm} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    break;
+                default:
+                    await
+                context.SayAsync($"No Problem. Any time", $"No Problem. Any time",
+               new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    break;
             }
-            else
+                context.Wait(MessageReceivedAsync); 
+               
+        }
+
+        public async Task AfterResetPartAsync(IDialogContext context, IAwaitable<object> argument)
+        {
+            var confirm = await argument;
+
+            var rnd = new Random();
+            var say = rnd.Next(1, 2);
+
+            switch (say)
             {
-                await context.SayAsync("Did not reset count.", $"Counter is not reset. Current value: {this.count}");
+                case 1:
+                    await
+                    context.SayAsync($"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", $"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    break;
+                case 2:
+                    await context.SayAsync($"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", $"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    break;
+                default:
+                    await
+                context.SayAsync($"No Problem. Any time", $"No Problem. Any time",
+               new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    break;
             }
             context.Wait(MessageReceivedAsync);
+
         }
     }
 }
