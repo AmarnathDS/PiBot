@@ -99,7 +99,7 @@ namespace PiBot.Dialogs
 
         }
 
-        public async Task AfterResetAsync(IDialogContext context, IAwaitable<object> argument)
+        public async Task AfterResetAsync(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
             var confirm = await argument;
 
@@ -110,10 +110,10 @@ namespace PiBot.Dialogs
             {
                 case 1:
                     await
-                    context.SayAsync($"order {confirm} is deliverd to plant", $"order {confirm} is deliverd to plant", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    context.SayAsync($"order {confirm.Text} is deliverd to plant", $"order {confirm.Text} is deliverd to plant", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
                 case 2:
-                    await context.SayAsync($"order {confirm} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", $"order {confirm} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    await context.SayAsync($"order {confirm.Text} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", $"order {confirm.Text} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
                 default:
                     await
@@ -125,7 +125,7 @@ namespace PiBot.Dialogs
                
         }
 
-        public async Task AfterResetPartAsync(IDialogContext context, IAwaitable<object> argument)
+        public async Task AfterResetPartAsync(IDialogContext context, IAwaitable<IMessageActivity> argument)
         {
             var confirm = await argument;
 
@@ -136,10 +136,10 @@ namespace PiBot.Dialogs
             {
                 case 1:
                     await
-                    context.SayAsync($"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", $"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    context.SayAsync($"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", $"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
                 case 2:
-                    await context.SayAsync($"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", $"Part Qty for part {confirm} is 5. The rack location for the part {confirm} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    await context.SayAsync($"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", $"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
                 default:
                     await
