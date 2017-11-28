@@ -104,7 +104,7 @@ namespace PiBot.Dialogs
             var confirm = await argument;
 
             var rnd = new Random();
-            var say = rnd.Next(1, 2);
+            var say = rnd.Next(1, 3);
 
             switch (say)
             {
@@ -117,8 +117,7 @@ namespace PiBot.Dialogs
                     break;
                 default:
                     await
-                context.SayAsync($"No Problem. Any time", $"No Problem. Any time",
-               new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                context.SayAsync($"order {confirm.Text} is deliverd to plant", $"order {confirm.Text} is deliverd to plant", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
             }
                 context.Wait(MessageReceivedAsync); 
@@ -130,7 +129,7 @@ namespace PiBot.Dialogs
             var confirm = await argument;
 
             var rnd = new Random();
-            var say = rnd.Next(1, 2);
+            var say = rnd.Next(1, 3);
 
             switch (say)
             {
@@ -139,12 +138,11 @@ namespace PiBot.Dialogs
                     context.SayAsync($"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", $"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
                 case 2:
-                    await context.SayAsync($"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", $"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                    await context.SayAsync($"Part Qty for part {confirm.Text} is 8. The rack location for the part {confirm.Text} is RBH113", $"Part Qty for part {confirm.Text} is 8. The rack location for the part {confirm.Text} is RBH113", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
                 default:
                     await
-                context.SayAsync($"No Problem. Any time", $"No Problem. Any time",
-               new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                context.SayAsync($"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", $"Part Qty for part {confirm.Text} is 5. The rack location for the part {confirm.Text} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                     break;
             }
             context.Wait(MessageReceivedAsync);
