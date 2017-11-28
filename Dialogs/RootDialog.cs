@@ -23,7 +23,7 @@ namespace PiBot.Dialogs
             activity.Text = activity.Text ?? string.Empty;
 
             // check if the user said reset
-            if (activity.Text.ToLowerInvariant().StartsWith("order"))
+            if (activity.Text.ToLowerInvariant().Contains("order"))
             {
                 // ask the user to confirm if they want to reset the counter
                 //var options = new PromptOptions<string>(prompt: "Are you sure you want to reset the count?",
@@ -75,7 +75,7 @@ namespace PiBot.Dialogs
                 await context.SayAsync($"order {activity.Text} is in transit", $"order {activity.Text} is in transit", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                 context.Wait(MessageReceivedAsync);
             }
-            else if (activity.Text.ToLowerInvariant().StartsWith("thanks"))
+            else if (activity.Text.ToLowerInvariant().Contains("thanks"))
             {
                 // calculate something for us to return
                 //int length = activity.Text.Length;
@@ -96,7 +96,7 @@ namespace PiBot.Dialogs
                         new MessageOptions() {InputHint = InputHints.ExpectingInput});
                 context.Wait(MessageReceivedAsync);
             }
-            else if (activity.Text.ToLowerInvariant().StartsWith("part"))
+            else if (activity.Text.ToLowerInvariant().Contains("part"))
             {
                 await context.SayAsync($"Please say the part number", $"Please say the part number", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                 context.Wait(MessageReceivedAsync);
