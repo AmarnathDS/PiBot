@@ -37,7 +37,7 @@ namespace PiBot.Dialogs
                 context.Wait(MessageReceivedAsync);
 
             }
-            else if (activity.Text.ToLowerInvariant().StartsWith("m"))
+            else if (activity.Text.ToLowerInvariant().StartsWith("m1"))
             {
                 // calculate something for us to return
                 //int length = activity.Text.Length;
@@ -56,7 +56,7 @@ namespace PiBot.Dialogs
                 await context.SayAsync($"order {activity.Text} is deliverd to plant", $"order {activity.Text} is deliverd to plant", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                 context.Wait(MessageReceivedAsync);
             }
-            else if (activity.Text.ToLowerInvariant().StartsWith("a"))
+            else if (activity.Text.ToLowerInvariant().StartsWith("a2"))
             {
                 // calculate something for us to return
                 //int length = activity.Text.Length;
@@ -72,10 +72,10 @@ namespace PiBot.Dialogs
 
 
                 // say reply to the user
-                await context.SayAsync($"order {activity.Text} is in transit", $"order {activity.Text} is in transit", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                await context.SayAsync($"order {activity.Text} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", $"order {activity.Text} is in transit. Expected arrival is {DateTime.Today.Date.AddDays(2).ToShortDateString()}", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                 context.Wait(MessageReceivedAsync);
             }
-            else if (activity.Text.ToLowerInvariant().Contains("thanks"))
+            else if (activity.Text.ToLowerInvariant().Contains("thank"))
             {
                 // calculate something for us to return
                 //int length = activity.Text.Length;
@@ -88,22 +88,40 @@ namespace PiBot.Dialogs
                 //reply.InputHint = InputHints.ExpectingInput;
                 //await context.PostAsync(reply);
 
+                var rnd = new Random();
+                var say = rnd.Next(1, 4);
 
+                switch (say)
+                {
+                    case 1:
+                        await
+                        context.SayAsync($"Happy to help. Hope i have answered your queries", $"Happy to help. Hope i have answered your queries",
+                   new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                        break;
+                    case 2:
+                        await
+                        context.SayAsync($"No Problem. Happy to help", $"No Problem. Happy to help",
+                   new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                        break;
+                    case 3:
+                        await
+                        context.SayAsync($"Any time. Happy to help", $"Any time. Happy to help",
+                       new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                        break;
+                }
 
                 // say reply to the user
-                await
-                    context.SayAsync($"Happy to help", $"Happy to help",
-                        new MessageOptions() {InputHint = InputHints.ExpectingInput});
+               
                 context.Wait(MessageReceivedAsync);
             }
-            else if (activity.Text.ToLowerInvariant().Contains("part"))
+            else if (activity.Text.ToLowerInvariant().Contains("part") || activity.Text.ToLowerInvariant().Contains("number"))
             {
                 await context.SayAsync($"Please say the part number", $"Please say the part number", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                 context.Wait(MessageReceivedAsync);
             }
-            else if (activity.Text.ToLowerInvariant().Equals("2215656"))
+            else if (activity.Text.ToLowerInvariant().StartsWith("13"))
             {
-                await context.SayAsync($"Part Qty for part {activity.Text} is 5", $"Part Qty for part {activity.Text} is 5", new MessageOptions() { InputHint = InputHints.ExpectingInput });
+                await context.SayAsync($"Part Qty for part {activity.Text} is 5. The rack location for the part {activity.Text} is WH010", $"Part Qty for part {activity.Text} is 5. The rack location for the part {activity.Text} is WH010", new MessageOptions() { InputHint = InputHints.ExpectingInput });
                 context.Wait(MessageReceivedAsync);
             }
             else
